@@ -6,16 +6,17 @@ def quadratic_equation():
     b = int(input("Input value of b: "))
     c = int(input("Input value of c: "))
 
-    determinant = (b ^ 2 - 4 * a * c)
+    determinant = ((b ** 2) - (4 * a * c))
     if determinant < 0:
-        return "No real roots exist"
+        answer = "No real roots exist"
     elif determinant == 0:
-        root = (-b / 2 * a)
-        return "The equation has one root: x = " + root
+        root = (-b / (2 * a))
+        answer = f"The equation has one root: x =  {root}"
     else:
-        root1 = ((-b + sqrt(determinant)) / 2*a)
-        root2 = ((-b - sqrt(determinant)) / 2*a)
-        return "The equation has two roots: x1 = " + root1 + " and x2 = " + root2
+        root1 = ((-b + sqrt(determinant)) / (2 * a))
+        root2 = ((-b - sqrt(determinant)) / (2 * a))
+        answer = f"The equation has two roots: x1 =  {root1}   and x2 =  {root2}"
+    return answer
 
 
 print(quadratic_equation())
