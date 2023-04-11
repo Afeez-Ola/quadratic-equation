@@ -9,8 +9,8 @@ def quadratic_equation(a, b, c):
         root = (-b / (2 * a))
         answer = f"The equation has one root: x =  {root}"
     else:
-        root1 = ((-b + sqrt(determinant)) / (2 * a))
-        root2 = ((-b - sqrt(determinant)) / (2 * a))
+        root1 = round(((-b + sqrt(determinant)) / (2 * a)), 2)
+        root2 = round(((-b - sqrt(determinant)) / (2 * a)), 2)
         answer = f"The equation has two roots: x1 =  {root1}   and x2 =  {root2}"
     return answer
 
